@@ -1,13 +1,8 @@
-import { Seo } from "@/ui/components/seo";
-
-
+import { Typography } from "@/ui/design-system/typography/typography";
 export default function Home() {
   return (
-   <>
-    <Seo title="paraglding app"  description="this application is developed for enhance paraglinding practice in algeria"/>
-    <h1>
-      hello world
-    </h1>
-   </>
-  )
+    <>
+      <Typography component="h1">paragliding application</Typography>
+    </>
+  );
 }
