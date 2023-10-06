@@ -18,20 +18,72 @@ interface Props {
     | "caption4";
   children: React.ReactNode;
   component: "h1" | "h2" | "h3" | "h4" | "h5" | "p" | "div" | "span";
+  theme?: "black" | "gray" | "white" | "primary" | "secondary";
+  weight?: "regular" | "medium";
+  className?: string;
 }
 export const Typography = ({
   variant = "h3",
   component: Component = "div",
   children,
+  theme = "black",
+  weight = "regular",
+  className,
 }: Props) => {
   let variantStyles: string = "";
   switch (variant) {
     case "display":
-      variantStyles = "text-red-500";
+      variantStyles = "text-8xl";
       break;
     case "h1":
-      variantStyles = "text-green-500";
+      variantStyles = "text-7xl";
+      break;
+    case "h2":
+      variantStyles = "text-6xl";
+      break;
+    case "h3": //defaultn n bn bnhnhbnhgf gfggf b
+      variantStyles = "text-5xl";
+      break;
+    case "h4":
+      variantStyles = "text-4xl";
+      break;
+    case "h5":
+      variantStyles = "text-3xl";
+      break;
+    case "lead":
+      variantStyles = "text-2xl";
+      break;
+    case "body-lg":
+      variantStyles = "text-lg";
+      break;
+    case "body-base":
+      variantStyles = "text-base";
+      break;
+    case "body-sm":
+      variantStyles = "text-sm";
+      break;
+    case "caption1":
+      variantStyles = "text-caption1";
+      break;
+    case "caption2":
+      variantStyles = "text-caption2";
+      break;
+    case "caption3":
+      variantStyles = "text-caption3";
+      break;
+    case "caption4":
+      variantStyles = "text-caption4";
       break;
   }
-  return <Component className={clsx(variantStyles)}>{children}</Component>;
+  return (
+    <Component
+      className={clsx(
+        variantStyles,
+        className,
+        weight === "medium" && "font-medium"
+      )}
+    >
+      {children}
+    </Component>
+  );
 };
