@@ -31,6 +31,7 @@ export const Typography = ({
   className,
 }: Props) => {
   let variantStyles: string = "";
+  let colorStyles: string = "white";
   switch (variant) {
     case "display":
       variantStyles = "text-8xl";
@@ -41,7 +42,7 @@ export const Typography = ({
     case "h2":
       variantStyles = "text-6xl";
       break;
-    case "h3": //defaultn n bn bnhnhbnhgf gfggf b
+    case "h3": //default value in our case
       variantStyles = "text-5xl";
       break;
     case "h4":
@@ -75,12 +76,30 @@ export const Typography = ({
       variantStyles = "text-caption4";
       break;
   }
+  switch (theme) {
+    case "black": //value by default
+      colorStyles = "text-gray";
+      break;
+    case "white":
+      colorStyles = "text-white";
+      break;
+    case "gray":
+      colorStyles = "text-gray-700";
+      break;
+    case "primary":
+      colorStyles = "text-primary";
+      break;
+    case "secondary":
+      colorStyles = "text-secondary";
+      break;
+  }
   return (
     <Component
       className={clsx(
         variantStyles,
         className,
-        weight === "medium" && "font-medium"
+        weight === "medium" && "font-medium",
+        colorStyles
       )}
     >
       {children}
