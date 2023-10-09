@@ -133,7 +133,10 @@ const config: Config = {
         },
       ],
     },
-
+    borderRadius: {
+      DEFAULT: "10px",
+      full: "9999px",
+    },
     extend: {
       colors: {
         white: "#ffffff",
