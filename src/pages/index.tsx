@@ -1,6 +1,8 @@
-import { Button } from "@/ui/design-system/typography/button/button";
+import { Spinner } from "@/ui/design-system/sminner/spinner";
+import { Button } from "@/ui/design-system/button/button";
 import { Typography } from "@/ui/design-system/typography/typography";
 import { RiSendPlaneFill } from "react-icons/ri";
+import Logo from "@/ui/design-system/logo/logo";
 export default function Home() {
   let deltaPlaneIcon = <RiSendPlaneFill />;
   return (
@@ -9,19 +11,20 @@ export default function Home() {
         paragliding application
       </Typography>
       <div className="flex items-center gap-2 p-10">
-        <Button size="small" variant="accent">
+        <Button isLoading size="small" variant="accent">
           Accent
         </Button>
-        <Button size="small" variant="secondary">
+        <Button isLoading size="small" variant="secondary">
           secondary
         </Button>
-        <Button size="small" variant="outline">
+        <Button isLoading size="small" variant="outline">
           outline
         </Button>
-        <Button size="small" variant="disabled" disabled>
+        <Button isLoading size="small" variant="disabled" disabled>
           disabled
         </Button>
         <Button
+          isLoading
           size="small"
           variant="iconButton"
           icon={{ icon: RiSendPlaneFill }}
@@ -71,7 +74,7 @@ export default function Home() {
           iconPosition="left"
         />
       </div>
-      <div className="flex gap-10">
+      <div className="flex gap-10 p-10">
         <Button
           size="large"
           variant="iconButton"
@@ -90,6 +93,17 @@ export default function Home() {
           iconTheme="accent"
           variant="iconButton"
         />
+      </div>
+      <div className="flex items-center p-10 gap-10">
+        <Spinner variant="primary" size="small" />
+        <Spinner />
+        <Spinner variant="white" size="large" animate="spin" />
+      </div>
+      <div className="flex items-center p-10 gap-10">
+        <Logo size="verySmall" />
+        <Logo size="small" />
+        <Logo />
+        <Logo size="large" />
       </div>
     </>
   );
