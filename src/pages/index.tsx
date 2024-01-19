@@ -95,23 +95,30 @@ export default function Home() {
           variant="iconButton"
         />
       </div>
-      <div className="flex items-center p-10 gap-10">
-        <Spinner variant="primary" size="small" />
-        <Spinner />
-        <Spinner variant="white" size="large" animate="spin" />
+      <div className="flex flex-col">
+        <p>spinner</p>
+        <div className="flex items-center p-10 gap-10">
+          <Spinner variant="primary" size="small" />
+          <Spinner />
+          <Spinner variant="white" size="large" animate="spin" />
+        </div>
       </div>
-      <div className="flex items-center p-10 gap-10">
-        <Logo size="verySmall" />
-        <Logo size="small" />
-        <Logo />
-        <Logo size="large" />
+      <div className="flex flex-col">
+        <p>logo</p>
+        <div className="flex items-center p-10 gap-10">
+          <Logo size="verySmall" />
+          <Logo size="small" />
+          <Logo />
+          <Logo size="large" />
+        </div>
       </div>
+
       <div className="flex flex-col">
         <p>Avatar</p>
         <div className="flex items-center p-10 gap-10">
-          <Avatar size="small" />
-          <Avatar />
-          <Avatar size="large" />
+          <Avatar size="small" src="/assets/images/avatar.png" alt="avatar" />
+          <Avatar src="/assets/images/avatar.png" alt="avatar" />
+          <Avatar size="large" src="/assets/images/avatar.png" alt="avatar" />
         </div>
       </div>
     </>
