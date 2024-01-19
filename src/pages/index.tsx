@@ -3,6 +3,7 @@ import { Button } from "@/ui/design-system/button/button";
 import { Typography } from "@/ui/design-system/typography/typography";
 import { RiSendPlaneFill } from "react-icons/ri";
 import Logo from "@/ui/design-system/logo/logo";
+import Avatar from "@/ui/design-system/avatar/avatar";
 export default function Home() {
   let deltaPlaneIcon = <RiSendPlaneFill />;
   return (
@@ -104,6 +105,14 @@ export default function Home() {
         <Logo size="small" />
         <Logo />
         <Logo size="large" />
+      </div>
+      <div className="flex flex-col">
+        <p>Avatar</p>
+        <div className="flex items-center p-10 gap-10">
+          <Avatar size="small" />
+          <Avatar />
+          <Avatar size="large" />
+        </div>
       </div>
     </>
   );
