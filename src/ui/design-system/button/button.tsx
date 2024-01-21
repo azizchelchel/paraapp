@@ -1,6 +1,6 @@
 import { IconProps } from "@/types/iconProps";
 import clsx from "clsx";
-import { Spinner } from "../sminner/spinner";
+import { Spinner } from "../spinner/spinner";
 
 interface Props {
   size?: "small" | "medium" | "large";
@@ -90,7 +90,7 @@ export const Button = ({
         variantStyles,
         sizeStyles,
         iconButtonSize,
-        "relative",
+        "relative animate",
         isLoading && "cursor-wait"
       )}
       onClick={() => console.log("click")}

@@ -1,126 +1,14 @@
-import { Spinner } from "@/ui/design-system/sminner/spinner";
-import { Button } from "@/ui/design-system/button/button";
-import { Typography } from "@/ui/design-system/typography/typography";
+import { Seo } from "@/ui/components/seo/seo";
 import { RiSendPlaneFill } from "react-icons/ri";
-import Logo from "@/ui/design-system/logo/logo";
-import Avatar from "@/ui/design-system/avatar/avatar";
+import Navigation from "@/ui/components/navigation/navigation";
+import { Footer } from "@/ui/components/navigation/footer";
 export default function Home() {
   let deltaPlaneIcon = <RiSendPlaneFill />;
   return (
     <>
-      <Typography variant="h3" theme="primary" component="div">
-        paragliding application
-      </Typography>
-      <div className="flex items-center gap-2 p-10">
-        <Button isLoading size="small" variant="accent">
-          Accent
-        </Button>
-        <Button isLoading size="small" variant="secondary">
-          secondary
-        </Button>
-        <Button isLoading size="small" variant="outline">
-          outline
-        </Button>
-        <Button isLoading size="small" variant="disabled" disabled>
-          disabled
-        </Button>
-        <Button
-          isLoading
-          size="small"
-          variant="iconButton"
-          icon={{ icon: RiSendPlaneFill }}
-        />
-      </div>
-      <div className="flex items-center gap-2 p-10">
-        <Button size="medium" variant="accent">
-          Accent
-        </Button>
-        <Button size="medium" variant="secondary">
-          secondary
-        </Button>
-        <Button size="medium" variant="outline">
-          outline
-        </Button>
-        <Button size="medium" variant="disabled" disabled>
-          disabled
-        </Button>
-        <Button
-          size="medium"
-          variant="iconButton"
-          icon={{ icon: RiSendPlaneFill }}
-        />
-      </div>
-      <div className="flex items-center gap-2 p-10">
-        <Button size="large" variant="accent">
-          Accent
-        </Button>
-        <Button size="large" variant="secondary">
-          secondary
-        </Button>
-        <Button size="large" variant="outline">
-          outline
-        </Button>
-        <Button
-          size="large"
-          icon={{ icon: RiSendPlaneFill }}
-          variant="disabled"
-          disabled
-        >
-          disabled
-        </Button>
-        <Button
-          size="large"
-          variant="iconButton"
-          icon={{ icon: RiSendPlaneFill }}
-          iconPosition="left"
-        />
-      </div>
-      <div className="flex gap-10 p-10">
-        <Button
-          size="large"
-          variant="iconButton"
-          icon={{ icon: RiSendPlaneFill }}
-          iconTheme="secondary"
-        />
-        <Button
-          size="large"
-          variant="iconButton"
-          icon={{ icon: RiSendPlaneFill }}
-          iconTheme="gray"
-        />
-        <Button
-          size="large"
-          icon={{ icon: RiSendPlaneFill }}
-          iconTheme="accent"
-          variant="iconButton"
-        />
-      </div>
-      <div className="flex flex-col">
-        <p>spinner</p>
-        <div className="flex items-center p-10 gap-10">
-          <Spinner variant="primary" size="small" />
-          <Spinner />
-          <Spinner variant="white" size="large" animate="spin" />
-        </div>
-      </div>
-      <div className="flex flex-col">
-        <p>logo</p>
-        <div className="flex items-center p-10 gap-10">
-          <Logo size="verySmall" />
-          <Logo size="small" />
-          <Logo />
-          <Logo size="large" />
-        </div>
-      </div>
-
-      <div className="flex flex-col">
-        <p>Avatar</p>
-        <div className="flex items-center p-10 gap-10">
-          <Avatar size="small" src="/assets/images/avatar.png" alt="avatar" />
-          <Avatar src="/assets/images/avatar.png" alt="avatar" />
-          <Avatar size="large" src="/assets/images/avatar.png" alt="avatar" />
-        </div>
-      </div>
+      <Seo title="Design System" description="description..." />
+      <Navigation />
+      <Footer />
     </>
   );
 }

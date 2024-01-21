@@ -17,7 +17,7 @@ interface Props {
     | "caption3"
     | "caption4";
   children: React.ReactNode;
-  component: "h1" | "h2" | "h3" | "h4" | "h5" | "p" | "div" | "span";
+  component?: "h1" | "h2" | "h3" | "h4" | "h5" | "p" | "div" | "span";
   theme?: "black" | "gray" | "white" | "primary" | "secondary";
   weight?: "regular" | "medium";
   className?: string;
