@@ -18,7 +18,7 @@ const Navigation = () => {
                 Paragliding Application
               </div>
               <Typography variant="caption4" component="span" theme="gray">
-                Trouver de l'inspiration et reçois des feedbacks
+                Trouver de l &apos; inspiration et reçois des feedbacks
               </Typography>
             </div>
           </div>
