@@ -7,10 +7,10 @@ export const Footer = () => {
       <Container className="flex justify-between pt-14">
         <div className="">
           <Typography variant="caption1" theme="white" weight="medium">
-            Formations
+            Footer
           </Typography>
           <Typography variant="caption3" theme="gray" weight="medium">
-            Abonne toi à la chaine
+            Chellal Aziz Copyright
           </Typography>
         </div>
         <div></div>

@@ -8,16 +8,61 @@ import { Typography } from "@/ui/design-system/typography/typography";
 import Navigation from "@/ui/components/navigation/navigation";
 import React from "react";
 import { RiSendPlaneFill } from "react-icons/ri";
+import { Footer } from "@/ui/components/navigation/footer";
 
 const DesignSystem = () => {
   return (
     <>
       <Seo title="Design System" description="description..." />
       <Navigation />
-      <Container className="py-10 space-y-20">
-        <Typography variant="h3" theme="primary" component="div">
+      <Container className="py-10 space-y-5">
+        <Typography>Typography</Typography>
+        <Typography variant="h1" theme="primary" component="h1">
           paragliding application
         </Typography>
+        <Typography variant="h2" theme="secondary" component="h2">
+          paragliding application
+        </Typography>
+        <Typography variant="h3" theme="black" component="h3">
+          paragliding application
+        </Typography>
+        <Typography variant="h4" theme="gray" component="h4">
+          paragliding application
+        </Typography>
+        <Typography variant="h5" theme="primary" component="h5">
+          paragliding application
+        </Typography>
+        <Typography variant="display" theme="primary" component="div">
+          paragliding application
+        </Typography>
+        <Typography variant="lead" theme="primary" component="p">
+          paragliding application
+        </Typography>
+        <Typography variant="body-lg" theme="primary" component="span">
+          paragliding application
+        </Typography>
+        <Typography variant="body-base" theme="primary" component="div">
+          paragliding application
+        </Typography>
+        <Typography variant="display" theme="primary" component="div">
+          paragliding application
+        </Typography>
+        <Typography variant="body-sm" theme="primary" component="div">
+          paragliding application
+        </Typography>
+        <Typography variant="caption1" theme="primary" component="div">
+          paragliding application
+        </Typography>
+        <Typography variant="caption2" theme="primary" component="div">
+          paragliding application
+        </Typography>
+        <Typography variant="caption3" theme="primary" component="div">
+          paragliding application
+        </Typography>
+        <Typography variant="caption4" theme="primary" component="div">
+          paragliding application
+        </Typography>
+        <Typography>Buttons</Typography>
         <div className="flex items-center gap-2 p-10">
           <Button isLoading size="small" variant="accent">
             Accent
@@ -38,6 +83,7 @@ const DesignSystem = () => {
             icon={{ icon: RiSendPlaneFill }}
           />
         </div>
+        <Typography>Variants</Typography>
         <div className="flex items-center gap-2 p-10">
           <Button size="medium" variant="accent">
             Accent
@@ -102,16 +148,16 @@ const DesignSystem = () => {
             variant="iconButton"
           />
         </div>
+        <Typography>Spinner</Typography>
         <div className="flex flex-col">
-          <p>spinner</p>
           <div className="flex items-center p-10 gap-10">
             <Spinner variant="primary" size="small" />
             <Spinner />
             <Spinner variant="white" size="large" animate="spin" />
           </div>
         </div>
+        <Typography>Logo</Typography>
         <div className="flex flex-col">
-          <p>logo</p>
           <div className="flex items-center p-10 gap-10">
             <Logo size="verySmall" />
             <Logo size="small" />
@@ -119,16 +165,16 @@ const DesignSystem = () => {
             <Logo size="large" />
           </div>
         </div>
-
+        <Typography>Avatar</Typography>
         <div className="flex flex-col">
-          <p>Avatar</p>
           <div className="flex items-center p-10 gap-10">
-            <Avatar size="small" src="/assets/images/avatar.png" alt="avatar" />
-            <Avatar src="/assets/images/avatar.png" alt="avatar" />
-            <Avatar size="large" src="/assets/images/avatar.png" alt="avatar" />
+            <Avatar size="small" src="/assets/images/me.jpg" alt="avatar" />
+            <Avatar src="/assets/images/me.jpg" alt="avatar" />
+            <Avatar size="large" src="/assets/images/me.jpg" alt="avatar" />
           </div>
         </div>
       </Container>
+      <Footer />
     </>
   );
 };
